@@ -1,18 +1,12 @@
 package main
 
 import (
-    "fmt"
+    . "github.com/lnhote/leetcodego/node"
 )
 
 // Input: (2 -> 4 -> 3) + (5 -> 6 -> 4)
 // Output: 7 -> 0 -> 8
 // Explanation: 342 + 465 = 807.
-
-// Definition for singly-linked list.
-type ListNode struct {
-    Val int
-    Next *ListNode
-}
 
 func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
     carry := 0
@@ -51,17 +45,9 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 }
 
 func main() {
-    var n1 = &ListNode{2, &ListNode{4, &ListNode{3, nil}}}
-    var n2 = &ListNode{5, &ListNode{6, &ListNode{4, nil}}}
-    printLNumber(n1)
-    printLNumber(n2)
-    printLNumber(addTwoNumbers(n1, n2))
-}
-
-func printLNumber(l *ListNode) {
-    for l != nil {
-        fmt.Print(l.Val)
-        l = l.Next
-    }
-    fmt.Print("\n")
+    var n1 = New([]int{2,4,3})
+    var n2 = New([]int{5,6,4})
+    Print(n1)
+    Print(n2)
+    Print(addTwoNumbers(n1, n2))
 }
