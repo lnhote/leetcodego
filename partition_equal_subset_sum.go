@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"github.com/lnhote/leetcodego/actest"
+)
 
 func canPartition(nums []int) bool {
 	sum := 0
@@ -37,11 +39,11 @@ func canPartition(nums []int) bool {
 }
 
 func main() {
-	fmt.Println(canPartition([]int{1, 2, 3, 4, 5, 6}))    // false
-	fmt.Println(canPartition([]int{2, 2, 2, 3, 3}))       // true
-	fmt.Println(canPartition([]int{2, 2, 2, 2, 2, 5, 5})) // true
-	fmt.Println(canPartition([]int{6, 4, 4}))             // false
-	fmt.Println(canPartition([]int{1, 1, 1, 3, 4}))       // true
-	fmt.Println(canPartition([]int{1, 5, 11, 5}))         // true
-	fmt.Println(canPartition([]int{1, 2, 5}))             // false
+	actest.Equal(false, canPartition([]int{1, 2, 3, 4, 5, 6}))    // false
+	actest.Equal(true, canPartition([]int{2, 2, 2, 3, 3}))       // true
+	actest.Equal(true, canPartition([]int{2, 2, 2, 2, 2, 5, 5})) // true
+	actest.Equal(false, canPartition([]int{6, 4, 4}))             // false
+	actest.Equal(true, canPartition([]int{1, 1, 1, 3, 4}))       // true
+	actest.Equal(true, canPartition([]int{1, 5, 11, 5}))         // true
+	actest.Equal(false, canPartition([]int{1, 2, 5}))             // false
 }

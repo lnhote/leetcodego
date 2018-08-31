@@ -1,7 +1,7 @@
 package main
 
 import (
-    "fmt"
+    "github.com/lnhote/leetcodego/actest"
 )
 
 func twoSum(nums []int, target int) []int {
@@ -19,5 +19,5 @@ func twoSum(nums []int, target int) []int {
 }
 
 func main() {
-    fmt.Println(twoSum([]int{1,2,3,4,5}, 6))
+    actest.EqualValues([]int{4,2}, twoSum([]int{1,2,3,4,5}, 6))
 }

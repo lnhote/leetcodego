@@ -1,7 +1,7 @@
 package main
 
 import (
-    "fmt"
+    "github.com/lnhote/leetcodego/actest"
 )
 
 // Given a string s, find the longest palindromic substring in s. You may assume that the maximum length of s is 1000.
@@ -39,8 +39,8 @@ func expandAroundCenter(s string, left, right int) string {
 }
 
 func main() {
-    fmt.Println(longestPalindrome("babad")) // bab
-    fmt.Println(longestPalindrome("cbbd")) // bb
-    fmt.Println(longestPalindrome("aaaabaaaaaaaa")) // aaaabaaaa
-    fmt.Println(longestPalindrome("aaaabbaaaaaaaa")) // aaaabbaaaa
+    actest.Equal("bab", longestPalindrome("babad"))
+    actest.Equal("bb", longestPalindrome("cbbd"))
+    actest.Equal("aaaabaaaa", longestPalindrome("aaaabaaaaaaaa"))
+    actest.Equal("aaaabbaaaa", longestPalindrome("aaaabbaaaaaaaa"))
 }

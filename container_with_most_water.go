@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"github.com/lnhote/leetcodego/actest"
+)
 
 // https://leetcode.com/problems/container-with-most-water/description/
 
@@ -28,5 +30,5 @@ func maxArea(height []int) int {
 }
 
 func main() {
-	fmt.Println(maxArea([]int{1,8,6,2,5,4,8,3,7})) // 49
+	actest.Equal(49, maxArea([]int{1,8,6,2,5,4,8,3,7}))
 }

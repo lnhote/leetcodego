@@ -1,17 +1,9 @@
 package main
 
 import (
-    "fmt"
+    "github.com/lnhote/leetcodego/actest"
 )
 
-// Symbol       Value
-// I             1
-// V             5
-// X             10
-// L             50
-// C             100
-// D             500
-// M             1000
 const (
     I =            1
     V =            5
@@ -50,15 +42,14 @@ func romanToInt(s string) int {
         } else {
             return 0
         }
-
     }
     return result
 }
 
 func main() {
-    fmt.Println(romanToInt("III")) // 3
-    fmt.Println(romanToInt("IV")) // 4
-    fmt.Println(romanToInt("IX")) // 9
-    fmt.Println(romanToInt("LVIII")) // 58
-    fmt.Println(romanToInt("MCMXCIV")) // 1994
+    actest.Equal(3, romanToInt("III"))
+    actest.Equal(4, romanToInt("IV"))
+    actest.Equal(9, romanToInt("IX"))
+    actest.Equal(58, romanToInt("LVIII"))
+    actest.Equal(1994, romanToInt("MCMXCIV"))
 }

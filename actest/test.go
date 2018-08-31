@@ -20,3 +20,7 @@ func (t SimpleTest) Errorf(format string, args ...interface{}) {
 func Equal(expected, actual interface{}, msgAndArgs ...interface{}) bool {
     return assert.Equal(t, expected, actual, msgAndArgs)
 }
+
+func EqualValues(expected, actual interface{}, msgAndArgs ...interface{}) bool {
+    return assert.EqualValues(t, expected, actual, msgAndArgs)
+}
