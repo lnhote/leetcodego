@@ -1,30 +1,31 @@
 package main
 
 import (
-    "github.com/lnhote/leetcodego/actest"
+	"github.com/lnhote/leetcodego/actest"
 )
 
 const (
-    I =            1
-    V =            5
-    X =            10
-    L =            50
-    C =            100
-    D =            500
-    M =            1000
+	I = 1
+	V = 5
+	X = 10
+	L = 50
+	C = 100
+	D = 500
+	M = 1000
 )
 
 var (
-    symboles = map[uint8]int{
-        'I': I,
-        'V': V,
-        'X': X,
-        'L': L,
-        'C': C,
-        'D': D,
-        'M': M,
-    }
+	symboles = map[uint8]int{
+		'I': I,
+		'V': V,
+		'X': X,
+		'L': L,
+		'C': C,
+		'D': D,
+		'M': M,
+	}
 )
+
 //Given a roman numeral, convert it to an integer. Input is guaranteed to be within the range from 1 to 3999
 func romanToInt(s string) int {
     if len(s) == 0 {
